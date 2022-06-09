@@ -11,7 +11,6 @@ class card(object):
         self.boxnumber = boxnumber
         self.timeofreview = timeofreview 
 
-# Defining a function for making a list of flashcards
     def flashcard( flash , word, meaning , boxnumber , timeofreview):        
         flash.append([word, meaning , boxnumber, timeofreview])
         return flash
@@ -38,7 +37,6 @@ def practice():
     file = open('totoalcards', 'rb')
     listofcards = pickle.load(file)
     file.close()
-
     for ele in listofcards :
         if datetime.strptime( str(datetime.now()),"%Y-%m-%d %H:%M:%S.%f")  > ele[3] and ele[2] != 6 :
            print('\n' + ele[0])
